@@ -11,11 +11,13 @@ import java.util.TreeMap;
 public class Frecuencia {
 	// atributo: un mapa para guardar las palabras (claves)
 	// con sus frecuencias (valores)
-	private Map<String, Integer> mapa = new TreeMap<String, Integer>();
+	private Map<String, Integer> mapa;
 
 	// constructor
 	public Frecuencia(File archivo) {
 		try {
+			// inicializo el mapa
+			mapa = new TreeMap<String, Integer>();
 			// leo el archivo
 			BufferedReader entrada = new BufferedReader(new FileReader(archivo));
 			String texto = entrada.readLine();
